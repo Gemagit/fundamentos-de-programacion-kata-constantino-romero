@@ -35,6 +35,7 @@ const pregunta = {
 }
 
 function imprimePregunta(pregunta) {
+<<<<<<< HEAD
     let newHTML = "";
 
     newHTML += imprimeTitulo(pregunta);
@@ -72,3 +73,34 @@ function imprimeInput(respuesta) {
 
 
 document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
+=======
+  const newHTML = "";
+
+  newHTML += imprimeTitulo(pregunta);
+  newHTML += imprimeTodasLasRespuestas(pregunta);
+
+  return newHTML;
+}
+
+function imprimeTitulo(pregunta) {
+  // Put your code here
+}
+
+function imprimeTodasLasRespuestas(pregunta) {
+  // Put your code here
+}
+
+function imprimeUnaRespuesta(respuesta) {
+  // Put your code here
+}
+
+function imprimeLabel(respuesta) {
+  // Put your code here
+}
+
+function imprimeInput(respuesta) {
+  // Put your code here
+}
+
+document.getElementById("contenedorPreguntas").innerHTML = imprimePregunta(pregunta);
+>>>>>>> 471cdda0f7a7df271ab16e8bc020f2a76db4c37d
