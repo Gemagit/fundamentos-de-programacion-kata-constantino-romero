@@ -1,3 +1,9 @@
+// GRUPO DE CLASE 
+
+//Alberto González Romero
+//Gema Millán Casado
+//Rafael Lasso de la Vega
+
 const pregunta = {
     titulo: '¿A quién ha doblado más veces Constantino Romero?',
     respuestas: [
@@ -48,25 +54,28 @@ function imprimeTitulo(pregunta) {
 }
 
 function imprimeTodasLasRespuestas(pregunta) {
-    let stringResultado = "";
-    let arrRespuestas = pregunta.respuestas;
-    for (let i = 0; i < arrRespuestas.length; i++) {
-        stringResultado += imprimeUnaRespuesta(arrRespuestas[i]);
+    let todasRespuestas = "";
+    for (let i = 0; i < pregunta.respuestas.length; i++) {
+        todasRespuestas += imprimeUnaRespuesta(pregunta.respuestas[i]);
     }
-    return stringResultado;
+    return todasRespuestas;
 }
 
 function imprimeUnaRespuesta(respuesta) {
-    return  imprimeLabel(respuesta) + imprimeInput(respuesta);
-}
- 
+    let unaRespuesta = "";
+    unaRespuesta += imprimeLabel(respuesta);
+    unaRespuesta += imprimeInput(respuesta);
+    return unaRespuesta;
+  }
+
+
 function imprimeLabel(respuesta) {
-    let label = `<label for="${respuesta.id}">${respuesta.label}</label>`;
+    let label=`<label for="${respuesta.id}">${respuesta.label}</label>`;
     return label;
 }
 
 function imprimeInput(respuesta) {
-    let input = `<input id="${respuesta.id}" name= "${respuesta.name}" type="radio" value="${respuesta.value}>`
+    let input=`<input id="${respuesta.id}" name= "${respuesta.name}" type="radio" value="${respuesta.value}>`;
     return input;
 }
 
